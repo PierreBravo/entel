@@ -16,8 +16,7 @@ class Venta(models.Model):
 class Producto(models.Model):
     nombre = models.CharField(max_length=50)
     cantidad = models.FloatField(blank=True, null=True)
-    fecha_venta = models.DateField(blank=True, null=True)
-    hora_venta = models.DateField(auto_now_add=True)
+    fecha_venta = models.DateTimeField(auto_now_add=True, blank=True)
     comentario = models.TextField() 
     vendedor = models.ForeignKey(Vendedor, null=True, blank=True, on_delete=models.CASCADE)
     venta = models.ManyToManyField(Venta,blank=True)
