@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block extrahead%}
+    {% endblock %}
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Document {%endblock%}</title>
+</head>
+<body>
+
+
+{% block navbar%}
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <button class="navbar-toggler" data-target="#menu" data-target="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+<div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav mr-auto">
+    <li class="navbar-item active">
+        <a href="#" class="nav-link">Inicio</a>
+    </li>
+    <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle activate" data-toggle="dropdown" data-target="desplegable"  href="#">
+            Mascotas
+            </a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Registrar</a>
+            <a class="dropdown-item" href="#">Listar</a>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="desplegable" href="#">
+                   Adopciones
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Solicitar</a>
+                    <a class="dropdown-item" href="#">Listar solicitudes</a>
+            </ul>
+    </ul>
+    <ul class="navbar-nav mr-auto">
+            <li class="navbar-item active">
+                <a href="#" class="nav-link">Entel</a>
+            </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="desplegable" href="#">
+                   Opciones
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Salir</a>
+            </ul>
+    </ul>
+</div>
+</li>
+</div>
+</nav>
+
+
+</div>
+
+      
+{%endblock%}
+
+
+{% block content %}
+<h5>Este es el contenido del archivo base</h5>
+{% endblock %}
+
+{% block footer %}
+<h5>Soy el Footer</h5>
+{%endblock %}
+
+{% block extrajs %}
+<script src="{% static 'js/js.js'%}"></script>
+{% endblock %}
+</body>
+</html>
