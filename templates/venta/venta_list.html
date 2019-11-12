@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+
+{% block content%}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+         <td>#</td> 
+         <td>Nombre</td>
+         <td>Cantidad</td> 
+         <td>Fecha de venta</td> 
+         <td>hora de venta</td>
+         <td>Comentario</td>
+         <td>Vendedor</td>
+         <td>Acciones</td>
+        </tr>
+    </thead>
+              
+    <tbody>
+        {% if object_list %}
+        {% for venta in object_list%}
+        <tr>
+          <td>{{venta.id}}</td> 
+          <td>{{venta.nombre}}</td> 
+          <td>{{venta.cantidad}}</td> 
+          <td>{{venta.fecha_venta}}</td> 
+          <td>{{venta.hora_venta}}</td> 
+          <td>{{venta.comentario}}</td> 
+          <td>{{venta.vendedor.nombre}} {{venta.vendedor.apellidos}}</td> 
+          <td>
+              <a class="btn btn-primary" href="{% url 'venta_editar' venta.id %}">Editar</a>
+              <a class="btn btn-danger" href="{% url 'venta_eliminar' venta.id %}">Eliminar</a>
+          </td>
+        </tr> 
+        {%endfor%}
+        {% else %}
+        <h1>no hay registros de ventas</h1>
+        {% endif %}
+    </tbody>
+</table>
+
+      
+      
+{%endblock%}
