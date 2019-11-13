@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+
+{% block content%}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+         <td>#</td> 
+         <td>Nombre</td>
+         <td>Apellidos</td>
+         <td>Email</td>
+         <td>Acciones</td>
+        </tr>
+    </thead>
+              
+    <tbody>
+        {% if object_list %}
+        {% for vendedor in object_list%}
+        <tr>
+          <td>{{vendedor.id}}</td> 
+          <td>{{vendedor.nombre}}</td> 
+          <td>{{vendedor.apellidos}}</td>
+          <td>{{vendedor.email}}</td> 
+          <td>
+                <a class="btn btn-primary" href="{% url 'vendedor_editar' vendedor.id %}">Editar</a>
+				<a class="btn btn-danger" href="{% url 'vendedor_eliminar' vendedor.id %}">Eliminar</a>
+          </td>
+        </tr> 
+        {%endfor%}
+        {% else %}
+        <h1>no hay registros nuevos de vendedores</h1>
+        {% endif %}
+    </tbody>
+</table>
+
+{%endblock%}

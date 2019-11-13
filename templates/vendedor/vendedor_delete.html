@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <h3>¿Desea eliminar el registro de {{vendedor.nombre}} {{vendedor.apellidos}}?</h3> 
+    <button type="btm btn-danger" type="submit">si, eliminar</button>
+    <a class="btn btn-default" href="{% url 'vendedor_listar'%}">Cancelar</a>
+</form>
+{% endblock %}

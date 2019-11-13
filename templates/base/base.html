@@ -34,15 +34,15 @@
             Venta
             </a>
             <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Registrar</a>
-            <a class="dropdown-item" href="#">Listar</a>
+            <a class="dropdown-item" href="{% url 'venta_crear'%}">Registrar</a>
+            <a class="dropdown-item" href="{% url 'venta_listar'%}">Listar</a>
             <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="desplegable" href="#">
                    Vendedor
                     </a>
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Ingresar</a>
-                    <a class="dropdown-item" href="#">Listar solicitudes</a>
+                    <a class="dropdown-item" href="{% url 'vendedor_crear'%}">Ingresar</a>
+                    <a class="dropdown-item" href="{% url 'vendedor_listar'%}">Listar solicitudes</a>
             </ul>
     </ul>
     <ul class="navbar-nav mr-auto">

@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+	{% csrf_token %}
+    
+    <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form.nombre.name}}">{{form.nombre.label}}</label>
+                    {{form.nombre}}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form2.nombre.apellidos}}">{{form.apellidos.label}}</label>
+                    {{form.apellidos}}
+                </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <label for="{{form2.edad.name}}">{{form.email.label}}</label>
+                    {{form.email}}
+                </div>
+            </div>
+            
+        <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                </div>
+            </div>
+    </form>
+    
+    
+</form>
+
+
+
+
+{% endblock %}
