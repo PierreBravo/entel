@@ -22,5 +22,5 @@ urlpatterns = [
     path('', include('apps.ventas.urls')),
     path('', include('apps.vendedor.urls')),
     path('', include('apps.usuario.urls')),
-    path('login/', auth_views.LoginView.as_view(template_name='index.html'), name="login"),
+    path('login/', auth_views.LoginView.as_view(template_name='usuario/index.html'), name="login"),
 ]
