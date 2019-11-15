@@ -6,10 +6,11 @@
 {% block navbar%}
 {% endblock %}
 {% block content %}
-<form method="post">
+<form class="container" method="post">
+	<br>
 	{% csrf_token %}
 	 <div class="row">
-    	<div class="col-md-6 col-md-offset-3">
+    	<div class="col-md-12 col-md-offset-3">
     		<div class="form-group">
         		<label for="username">Nombre de usuario:</label>
         		<input class="form-control" type="text" name="username">
@@ -17,7 +18,7 @@
         </div>
     </div>    
     <div class="row">
-    	<div class="col-md-6 col-md-offset-3">
+    	<div class="col-md-12 col-md-offset-3">
     		<div class="form-group">
         		<label for="username">Contraseña:</label>
         		<input class="form-control" type="password" name="password">
@@ -25,7 +26,7 @@
         </div>
     </div>
     <div class="row">
-    	<div class="col-md-6 col-md-offset-3">
+    	<div class="col-md-12 col-md-offset-3">
     		<div class="form-group">
                 <a href="#">Olvidé mi contraseña</a>
         		<input class="btn btn-primary" type="submit" value="Ingresar">

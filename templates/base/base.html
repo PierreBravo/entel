@@ -13,21 +13,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %} Document {%endblock%}</title>
+    <link rel="shortcut icon" type="imagen/jpg"href="https://pbs.twimg.com/profile_images/1037868632741740544/y0wXgRlA.jpg">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/css.css'%}">
+    <title>{% block title %} Entel {%endblock%}</title>
 </head>
 <body>
 
 
 {% block navbar%}
-<div class="container">
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<div class="navbar navbar-expand-lg navbar-light bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <button class="navbar-toggler" data-target="#menu" data-target="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
-<div class="collapse navbar-collapse" id="menu">
+ <div class="collapse navbar-collapse" id="menu">
     <ul class="navbar-nav mr-auto">
     <li class="navbar-item active">
-        <a href="#" class="nav-link">Inicio</a>
+        <a href="#" class="nav-link">Entel</a>
     </li>
     <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle activate" data-toggle="dropdown" data-target="desplegable"  href="#">
@@ -47,7 +49,7 @@
     </ul>
     <ul class="navbar-nav mr-auto">
             <li class="navbar-item active">
-                <a href="#" class="nav-link">Entel</a>
+                <a href="{% url 'registrar'%}" class="nav-link">Registrar </a>
             </li>
             <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="desplegable" href="#">
@@ -61,8 +63,6 @@
 </li>
 </div>
 </nav>
-
-
 </div>
 
       
@@ -74,7 +74,11 @@
 {% endblock %}
 
 {% block footer %}
-<h5>Soy el Footer</h5>
+<footer> <div class="text-center"></div>
+    <img src="https://http2.mlstatic.com/pack-5-chip-prepago-entel-150-mb-15-min-100-sms-D_NQ_NP_916983-MLC31213908799_062019-F.jpg" alt="logo">
+    Derechos de Autor - 2019| desarrollo web y movil
+</footer>
+     
 {%endblock %}
 
 {% block extrajs %}

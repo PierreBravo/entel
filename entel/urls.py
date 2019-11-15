@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('apps.vendedor.urls')),
     path('', include('apps.usuario.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='usuario/index.html'), name="login"),
+    path('logout/', auth_views.logout_then_login, name="logout"),
 ]

@@ -1,0 +1,18 @@
+footer{
+    background: #212121;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    clear:both;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer img{
+    height: 60px;
+}
+  
+.nav-item{
+    text-align: right;
+}

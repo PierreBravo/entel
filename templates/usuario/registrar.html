@@ -1,10 +1,10 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-<form method="post">
+<form class="center" method="post">
 	{% csrf_token %}
 	
-	<div class="row">
+	<div class="container">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
 				<label>Nombre</label>
@@ -12,7 +12,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="container">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
 				<label >Apellidos</label>
@@ -20,7 +20,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="container">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
 				<label >Nombre de usuario</label>
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="container">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
 				<label >Correo</label>
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="container">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
 				<label >Contraseña</label>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="container">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
 				<label >Confirmar contraseña</label>
@@ -53,7 +53,7 @@
 		</div>
 	</div>
 	
-	<div class="row">
+	<div class="container">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="form-group">
 				<button class="btn btn-primary "type="submit">Guardar</button>
@@ -63,3 +63,7 @@
 	
 </form>
 {% endblock %}
+
+{% block footer %}
+
+{%endblock %}

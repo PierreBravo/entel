@@ -11,9 +11,9 @@ class VendedorForm(forms.ModelForm):
          'email',		
 		]
 		 labels = {
-		 'nombre': 'Nombre',
-		 'apellidos': 'Apellidos',
-         'email': 'Correo electrónico',
+		 'nombre': 'Nombre:',
+		 'apellidos': 'Apellidos:',
+         'email': 'Correo electrónico:',
         }
 		 widgets = {
 		 'nombre':forms.TextInput(attrs={'class':'form-control'}),
