@@ -13,6 +13,7 @@ footer img{
     height: 60px;
 }
   
-.nav-item{
-    text-align: right;
+
+.navbar{
+    right: 70px;
 }
